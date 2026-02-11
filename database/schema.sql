@@ -23,5 +23,7 @@ CREATE TABLE order_items (
     id SERIAL PRIMARY KEY,
     order_id INT REFERENCES orders(id),
     food_item_id INT REFERENCES food_items(id),
-    quantity INT
+    quantity INT,
+    food_name VARCHAR(100),
+    food_price NUMERIC(10,2)
 );
