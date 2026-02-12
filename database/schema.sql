@@ -16,7 +16,8 @@ CREATE TABLE orders (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id),
     total_amount NUMERIC(10,2),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    payment_method VARCHAR(50)
 );
 
 CREATE TABLE order_items (
