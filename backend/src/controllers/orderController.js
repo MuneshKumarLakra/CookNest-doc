@@ -20,7 +20,7 @@ exports.placeOrder = async (req, res) => {
     // 2️⃣ Insert order items
     for (const food of foods) {
       await db.query(
-        `INSERT INTO order_items(order_id, food_item_id, food_name, price)
+        `INSERT INTO order_items(order_id, food_item_id, food_name, food_price)
          VALUES($1,$2,$3,$4)`,
         [orderId, food.id, food.name, food.price]
       );
@@ -41,7 +41,7 @@ exports.getOrders = async (req, res) => {
 
     for (const order of orders.rows) {
       const items = await db.query(
-        "SELECT food_name, price FROM order_items WHERE order_id=$1",
+        "SELECT food_name, food_price FROM order_items WHERE order_id=$1",
         [order.id]
       );
       order.items = items.rows;
