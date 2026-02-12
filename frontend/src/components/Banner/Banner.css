@@ -1,0 +1,9 @@
+.banner-image {
+  width: 100vw;
+  height: auto;
+  max-height: 50vh;
+  display: block;
+  margin-bottom: 12px;
+  margin-left: calc(-50vw + 50%);
+  object-fit: cover;
+}

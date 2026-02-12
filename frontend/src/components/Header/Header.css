@@ -1,0 +1,178 @@
+.app-header {
+  background: linear-gradient(135deg, #dd6e42 0%, #c55723 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header-content {
+  max-width: 1900px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 1920px) {
+  .header-content {
+    max-width: 1800px;
+    padding: 18px 40px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .header-content {
+    max-width: 2200px;
+  }
+}
+
+.app-logo h1 {
+  color: white;
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 1920px) {
+  .app-logo h1 {
+    font-size: 30px;
+  }
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.user-info i {
+  font-size: 28px;
+}
+
+@media (min-width: 1920px) {
+  .user-info {
+    font-size: 18px;
+  }
+  
+  .user-info i {
+    font-size: 32px;
+  }
+}
+
+.username {
+  font-weight: 500;
+}
+
+.order-history {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  font-size: 24px;
+}
+
+.order-history:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.order-history i {
+  font-size: 24px;
+}
+
+@media (min-width: 1920px) {
+  .order-history i {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .username {
+    display: none;
+  }
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+@media (min-width: 1920px) {
+  .logout-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+}
+
+.logout-btn:hover {
+  background-color: white;
+  color: #667eea;
+}
+
+.logout-btn i {
+  font-size: 18px;
+}
+
+@media (min-width: 1920px) {
+  .logout-btn i {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding: 12px 20px;
+  }
+  
+  .app-logo h1 {
+    font-size: 22px;
+  }
+  
+  .header-right {
+    gap: 12px;
+  }
+  
+  .logout-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .logout-btn span {
+    display: none;
+  }
+  
+  .user-info {
+    font-size: 14px;
+  }
+  
+  .user-info i {
+    font-size: 24px;
+  }
+}
